@@ -1,0 +1,9 @@
+com\example\simplerideshare\config\CorsConfig$1.class
+com\example\simplerideshare\model\Ride.class
+com\example\simplerideshare\repository\RideRepository.class
+com\example\simplerideshare\service\RideService.class
+com\example\simplerideshare\SimpleRideShareApplication.class
+com\example\simplerideshare\controller\RideController.class
+com\example\simplerideshare\controller\RideRestController.class
+com\example\simplerideshare\entity\Ride.class
+com\example\simplerideshare\config\CorsConfig.class
