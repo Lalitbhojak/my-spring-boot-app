@@ -22,15 +22,16 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/rides")
+    fetch(`${process.env.REACT_APP_API_URL}/api/rides`)
       .then((res) => res.json())
       .then((data) => setRides(data))
       .catch((err) => console.error("Error fetching rides:", err));
   }, []);
 
+
   const createRide = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8080/api/rides", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/rides`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -40,7 +41,7 @@ function App() {
   };
 
 const acceptRide = (id) => {
-  fetch(`http://localhost:8080/api/rides/${id}/accept`, {
+  fetch(`${process.env.REACT_APP_API_URL}/api/rides/${id}/accept`, {
     method: "PUT",
   })
     .then((res) => res.json())
