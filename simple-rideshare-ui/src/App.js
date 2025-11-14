@@ -122,7 +122,7 @@ const acceptRide = (id) => {
 
         {/* Google Map below form */}
         <div className="mt-4">
-          <LoadScript googleMapsApiKey="AIzaSyDoTfXf-1HylMf9nkpXAnxrWT-wXLkP1YY" libraries={['places']}>
+          <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY} libraries={['places']}>
             <GoogleMap
               mapContainerStyle={{ width: "100%", height: "400px" }}
               center={{ lat: 28.6139, lng: 77.2090 }}
